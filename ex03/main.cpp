@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcopoglu <bcopoglu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/01 17:50:20 by bcopoglu          #+#    #+#             */
-/*   Updated: 2024/03/07 21:13:28 by bcopoglu         ###   ########.fr       */
+/*   Created: 2024/03/07 15:09:07 by bcopoglu          #+#    #+#             */
+/*   Updated: 2024/03/07 15:09:57 by bcopoglu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-Weapon::Weapon(std::string type)
+int main()
 {
-	setType(type);
+{
+Weapon club = Weapon("crude spiked club");
+HumanA bob("Bob", club);
+bob.attack();
+club.setType("some other type of club");
+bob.attack();
 }
-
-Weapon::~Weapon()
 {
-	std::cout << "Destructor is called" << std::endl;
+Weapon club = Weapon("crude spiked club");
+HumanB jim("Jim");
+jim.setWeapon(club);
+jim.attack();
+club.setType("some other type of club");
+jim.attack();
 }
-
-const std::string& Weapon::getType() const
-{
-	return (this->type);
-}
-
-void	Weapon::setType(const std::string type)
-{
-	this->type = type;
+return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: bcopoglu <bcopoglu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:40:08 by bcopoglu          #+#    #+#             */
-/*   Updated: 2024/03/01 12:45:55 by bcopoglu         ###   ########.fr       */
+/*   Updated: 2024/03/07 21:12:07 by bcopoglu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Zombie::Zombie()
 {
-
+	std::cout << "Constructor is called" << std::endl;
 }
 
 Zombie::~Zombie()
