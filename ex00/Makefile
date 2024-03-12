@@ -1,22 +1,10 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: bcopoglu <bcopoglu@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/03/01 12:27:02 by bcopoglu          #+#    #+#              #
-#    Updated: 2024/03/01 12:28:47 by bcopoglu         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = Zombie
 
 CC = c++
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
-SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
 
