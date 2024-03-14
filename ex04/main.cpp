@@ -10,16 +10,17 @@ int main(int ac, char **av)
 		std::string		s2 = av[3];
 		std::string		line;
 
+
+		// Read File Descriptor Open
+		std::ifstream	readFile(av[1]);
+		if (!readFile.is_open())
+			return std::cerr << "File Open Permission Error!" << std::endl, 0;
+
 		// Write File Descriptor Open
 		std::string newFile = std::string(av[1]) + ".replace";
 		std::ofstream	writeFile(newFile.c_str());
 		if (!writeFile.is_open())
-			std::cerr << "File Write Permission Error!" << std::endl;
-
-		// Read File Descriptor Open
-		std::ifstream	readFile(av[0]);
-		if (!readFile.is_open())
-			std::cerr << "File Open Permission Error!" << std::endl;
+			return std::cerr << "File Write Permission Error!" << std::endl, 0;
 
 		while (std::getline(readFile, line))
 		{
