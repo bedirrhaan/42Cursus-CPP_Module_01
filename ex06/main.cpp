@@ -1,8 +1,8 @@
-#include "HARL.hpp"
+#include "Harl.hpp"
 
 int	main(int ac, char **av)
 {
-	HARL test;
+	Harl test;
 
 	switch (ac)
 	{

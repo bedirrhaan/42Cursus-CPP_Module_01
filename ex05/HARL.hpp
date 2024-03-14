@@ -2,7 +2,7 @@
 # define HARL_HPP
 # include <iostream>
 
-class HARL
+class Harl
 {
     private:
         void    debug(void);
@@ -11,8 +11,8 @@ class HARL
         void    error(void);
 
     public:
-        HARL();
-        ~HARL();
+        Harl();
+        ~Harl();
         void    complain(std::string level);
 };
 

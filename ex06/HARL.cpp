@@ -1,41 +1,41 @@
-#include "HARL.hpp"
+#include "Harl.hpp"
 #include <cstring>
 
-HARL::HARL()
+Harl::Harl()
 {
     std::cout << "Constructor called" << std::endl;
 }
 
-HARL::~HARL()
+Harl::~Harl()
 {
     std::cout << "Destructor called" << std::endl;
 }
 
-void    HARL::debug()
+void    Harl::debug()
 {
     std::cout << "[ DEBUG ] message" << std::endl;
 }
 
-void    HARL::info(void)
+void    Harl::info(void)
 {
     std::cout << "[ INFO ] message" << std::endl;
 }
 
-void    HARL::warning()
+void    Harl::warning()
 {
     std::cout << "[ WARNING ] message" << std::endl;
 }
 
-void    HARL::error()
+void    Harl::error()
 {
     std::cout << "[ ERROR ] message" << std::endl;
 }
 
-void    HARL::complain(std::string level)
+void    Harl::complain(std::string level)
 {
     const char* av[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     int i;
-    void (HARL::*command[4])(void) = {&HARL::debug, &HARL::info, &HARL::warning, &HARL::error};
+    void (Harl::*command[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
     for (i = 0; i < 4; ++i)
     {
